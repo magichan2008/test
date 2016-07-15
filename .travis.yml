@@ -1,0 +1,14 @@
+language: python
+python:
+- 2.7
+- 3.4
+- 3.5
+install:
+- pip install pytest pytest-pep8 pytest-cov
+script:
+- py.test
+after_success:
+- coveralls
+notifications:
+  slack:
+    secure: XDAgl+dPr7qZ38n/YEo1kQhMxXag0daNnycCOJdn/h61gBJPpzOt0ZGwebBf/mxL4szZbDMG9/m6PfdCtm3pnrUPUnbS5m+6mn4wOR9bDVysEZL6T+wqGq6MpdI4bc3DOZziEzCHeqw+OLhDJqC+p9ocZL2+YOoSvZmCn01/y8Y0qXBVanNtpmSBS6Jl2Q0Ir+/PFSi+AmOLaB7CaIMQqUhXWP0aeUdSbmcPFlXBiWjibqHgU6QIAN4jjKRiB3eqXg2lojJZ/qa5GdNY2bjgxdOx50v/San/77elGb94LEXL6vkK+q8YOzo+jb5U2tboGiMOo9ArqUVFZ+ch2mJjisIHOpd/LczWvvYQ9kuH2sS1CwVORySSs4zQKshWO5Uf1dwk1tqxJN/uXuctDoNUtijBlHPaCRlz3tAQ1db2raY2JvvP86PnkS+wcgJIPd3aF3wunogeGbbHHcJuDvAaktjJbYrC+cax6rioACym1XGMPeuHbz5SEZn+d/6aw1hGDYs6p/vs4qKgl4KaAjCcFD5odhDwiROgE1oEsP2TsP1Kkm3fIY9KjpBFGCl4JJJb9T0qiWB0xJbgj7HpYTXbSvOH6yBv2kE8NptJ+NktkirDulbYlI51+8stNYU22C4DQd51XyD1cESn2eq9Oz3s0uKRVgMxh8SzQCuf/vSv4fA=
