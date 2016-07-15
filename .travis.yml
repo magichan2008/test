@@ -4,7 +4,7 @@ python:
 - 3.4
 - 3.5
 install:
-- pip install pytest pytest-pep8 pytest-cov
+- pip install pytest pytest-pep8 pytest-cov coveralls
 script:
 - py.test
 after_success:
