@@ -57,3 +57,16 @@ def write_conf(addr=None, port=None, password=None):
         parser.set(SESSION_NAME, 'password', password)
     with open(conf_file, "w") as f:
         parser.write(f)
+
+
+def countup():
+    for i in range(10):
+        print("COUNT : {}".format(i))
+
+
+def hello():
+    print("hello world")
+
+
+def add(a, b):
+    print("{}".format(a + b))
