@@ -58,15 +58,16 @@ def write_conf(addr=None, port=None, password=None):
     with open(conf_file, "w") as f:
         parser.write(f)
 
+
 def new_func1():
     parser = SafeConfigParser()
     parser.add_section(SESSION_NAME)
     with open(conf_file, "w") as f:
         parser.write(f)
 
+
 def new_func2():
     parser = SafeConfigParser()
     parser.add_section(SESSION_NAME)
     with open(conf_file, "w") as f:
         parser.write(f)
-
