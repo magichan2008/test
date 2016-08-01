@@ -23,7 +23,7 @@ def dummy():
 
 def create_conf():
     parser = SafeConfigParser()
-    parser.add_section("WEB_CONTROLLER")
+    parser.add_section(SESSION_NAME)
     with open(conf_file, "w") as f:
         parser.write(f)
 
@@ -46,15 +46,14 @@ def read_conf():
     return addr, port, password
 
 
-def write_conf(addr, port, password):
-    if addr or port or password:
-        parser = SafeConfigParser()
-        parser.read(conf_file)
-        if addr:
-            parser.set(SESSION_NAME, 'addr', addr)
-        if port:
-            parser.set(SESSION_NAME, 'port', port)
-        if password:
-            parser.set(SESSION_NAME, 'password', password)
-        with open(conf_file, "w") as f:
-            parser.write(f)
+def write_conf(addr=None, port=None, password=None):
+    parser = SafeConfigParser()
+    parser.read(conf_file)
+    if addr:
+        parser.set(SESSION_NAME, 'addr', addr)
+    if port:
+        parser.set(SESSION_NAME, 'port', port)
+    if password:
+        parser.set(SESSION_NAME, 'password', password)
+    with open(conf_file, "w") as f:
+        parser.write(f)
