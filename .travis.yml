@@ -4,11 +4,14 @@ python:
 - 3.4
 - 3.5
 install:
-- pip install pytest pytest-pep8 pytest-cov coveralls
+- pip install pytest pytest-pep8 pytest-cov
+- pip install coveralls
+- pip install codeclimate-test-reporter
 script:
 - py.test
 after_success:
 - coveralls
+- CODECLIMATE_REPO_TOKEN=974dea7b78bc2217d6adb46f5e9fb545f73369b69cca26fec65ede756417bd1b codeclimate-test-reporter
 notifications:
   slack:
     secure: DUXWr3878+5WQzOAj3mRQBBE9ngYU0pnBWqv7ZwnmtbYj7GQF2sXa6Qx0S+IWfb/H0pMdyBWg7FnhFXRH92KKhfDJRiG/La1jCMIvFuIJ4/BhoUjqJPQprgAzM6DflA9UksZRk5yNxeMBYfoxIavYJQLEcw4mXIv1o5PU7GPcd8CW3duNHsWUr94vKz1w2iUR6heNwYfuJkpbrIpwArnWIS6DHzIfgOsDhZDCLq/6Ox0pwwMigmrWGJiG8sBv/RJQLZ57VDnWUNN0SciI3+ILXHDtbiy7G8rA9aMt8vLXixXInyEWTRhNIR5OeHcEem4ICllFhldjXnhUc8pu6lqchCc3kqDqYmuiFiHc3ZT1dk+Y9lncDa/UG9MBzUKZLt4Ri1kmkVNZ5cZ1pyKIFVwflQS/eGkRL6a9Qzr9+qoJbaTZnwxoJw9EGCuFvip4mq7ajnr0uLGvV7REmaZkYSPuDXP5+Zzsj8HgUrw4Dc/Y4Uop+dF+wdhOWMKHwD/s+WdbARwMDukq0LNa0SpkcW3/G168AbvI5zFp8k4kcwTYw/Ck9egxtgY5kOhm8bdrdzNlOPeP3U/cyjzrCbiEImFyfd824Em+tsjIiWRuazc5kED72jIR+nPhJ8Vqf1S1MOIg28bWEQquyLLXDtilIa+zUhHbWUXrrgYOFtcpioIa+Q=
